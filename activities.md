@@ -19,6 +19,8 @@
 * creating an ec2 instance :
    aws ec2 run-instances `
     --image-id ami-0d8d9a2de1bcdb066 `
-    --instance-type t2.micro `
+    --instance-type t3.micro `
     --key-name "mypckey"
 ------------
+* To view all the active regions in user account : 
+    aws ec2 describe-regions
