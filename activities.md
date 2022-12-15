@@ -24,3 +24,9 @@
 ------------
 * To view all the active regions in user account : 
     aws ec2 describe-regions --query Regions[].RegionName --output text  
+* To start and stop and terminate the instances :
+  aws ec2 start/stop/terminate-instance --instance-id <id> 
+## Activity 6 : start all rds instances which are in stopped state
+## Activity 7 : Delete all the security groups in all regions :
+* Delete all the security groups in all regions in all vpcs except dafault.
+ 
