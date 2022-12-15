@@ -23,4 +23,4 @@
     --key-name "mypckey"
 ------------
 * To view all the active regions in user account : 
-    aws ec2 describe-regions
+    aws ec2 describe-regions --query Regions[].RegionName --output text  
