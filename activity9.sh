@@ -23,3 +23,11 @@ subnet_id=$(aws ec2 describe-subnets --filters  "Name=vpc-id,Values=${vpc_id}" -
 echo "The subnet-id are ${subnet_id}"
 security=$(aws ec2 describe-security-groups --filters  "Name=vpc-id,Values=${vpc_id}" --query SecurityGroups[].GroupId --output text --region "${region}")
 echo "The security group_id: ${security}"
+
+count=$(aws ec2 describe-key-pairs --filters "Name=key-name,Values=${key_name}" --query "KeyPairs[] | length(@)" --region ${region})
+if [[ $count -eq 0 ]]; then
+    echo "key pair ${key_name} doesnot exist, so creating"
+    aws ec2 import-key-pair --key-name "${key_name}" --public-key-material "fileb://~/.ssh/${publickey_filename}"
+fi
+
+echo "key pair ${key_name} exists"
