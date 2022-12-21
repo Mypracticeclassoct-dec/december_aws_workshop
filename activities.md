@@ -47,4 +47,9 @@ aws ec2 authorize-security-group-ingress `
 
 # write a shell script to the above activities.
 
+# workshop_2 continuation: 21-12-2022
+-------------------------------------
+##  Automation using AWS CLI :
+-----------------------------------
 
+* 

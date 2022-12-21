@@ -10,3 +10,7 @@ This is the repository is created for aws_workshop
   * dev : read and create but not delete access to services.
 * follow this link to view the links shared : `https://gist.github.com/shaikkhajaibrahim/3413459e8600cae167322d9c66001639 `.
 * To learn about the `jmes path` refer ` https://jmespath.org/tutorial.html#filter-projections`
+
+# workshop-2 21/12/2022:
+-------------------------
+refer activities.md file.
